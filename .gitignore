@@ -1,0 +1,38 @@
+# Node modules (both frontend and backend)
+server/node_modules/
+client/node_modules/
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+server/.env
+client/.env
+
+# Build output (React build files)
+client/build/
+client/dist/
+
+# Cache directories
+server/.cache/
+client/.cache/
+server/.temporary/
+client/.temporary/
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage files
+coverage/
+
+# Ignore potential error reports
+error.log
