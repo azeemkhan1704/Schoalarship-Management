@@ -23,7 +23,7 @@ const MinorityBased = () => {
     const getScholarships = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/get-scholarships/${"minority-based"}`
+          `${process.env.BACKEND_URL}/get-scholarships/${"minority-based"}`
         );
         setScholarship(data.scholarship);
         

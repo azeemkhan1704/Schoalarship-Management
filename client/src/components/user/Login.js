@@ -21,7 +21,7 @@ const Login = () => {
   const PostData = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:8080/login`, {
+      const res = await axios.post(`${process.env.BACKEND_URL}/login`, {
         email,
         password,
       });

@@ -20,7 +20,7 @@ const AdminLogin = () => {
   const PostData = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:8080/adminlogin`, {
+      const res = await axios.post(`${process.env.BACKEND_URL}/adminlogin`, {
         email,
         password,
       });

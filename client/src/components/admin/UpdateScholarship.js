@@ -49,7 +49,7 @@ const UpdateScholarship = () => {
     try {
       // const id = params.id.toString();
       const { data } = await axios.get(
-        `http://localhost:8080/scholarship/${params.id}`
+        `${process.env.BACKEND_URL}/scholarship/${params.id}`
       );
       setScholarshipName(data.scholarship.scholarshipName);
       setDeadline(data.scholarship.deadline);
@@ -73,7 +73,7 @@ const UpdateScholarship = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:8080/get-scholarships/${id}`, {
+      const res = await axios.put(`${process.env.BACKEND_URL}/get-scholarships/${id}`, {
         scholarshipName,
         deadline,
         category,

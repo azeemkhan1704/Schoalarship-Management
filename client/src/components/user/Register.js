@@ -14,7 +14,9 @@ const Register = () => {
   const PostData = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:8080/register`, {
+      console.log(process.env.BACKEND_URL);
+      
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
         name,
         email,
         password,

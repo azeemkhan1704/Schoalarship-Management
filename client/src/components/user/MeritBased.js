@@ -23,7 +23,7 @@ const MeritBased = () => {
     const getScholarships = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/get-scholarships/${"merit-based"}`
+          `${process.env.BACKEND_URL}/get-scholarships/${"merit-based"}`
         );
         setScholarship(data.scholarship);
         

@@ -12,7 +12,7 @@ const ViewScholarships = () => {
   const getScholarships = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/get-scholarships`
+        `${process.env.BACKEND_URL}/get-scholarships`
       );
       setScholarship(data.scholarship);
     } catch (error) {
@@ -33,7 +33,7 @@ const ViewScholarships = () => {
   const handleDelete = async() => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/get-scholarships/${scholarship[selected]?._id}`
+        `${process.env.BACKEND_URL}/get-scholarships/${scholarship[selected]?._id}`
       );
       alert(data.message);
       navigate("/adminDashboard");
